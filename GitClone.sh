@@ -1,5 +1,4 @@
 #!/bin/bash
-cd AndroidStudioProjects/
 echo -n "branch: "
 read branch
 
@@ -8,6 +7,11 @@ read account
 
 echo -n "repository: "
 read repository
+
+echo -e 'Delete directory'
+rm -rf AndroidStudioProjects/$repository
+
+cd AndroidStudioProjects/
 
 if [ $account -eq 1 ]; then
 	git clone -b $branch --single-branch https://github.com/spicypunch/$repository.git
