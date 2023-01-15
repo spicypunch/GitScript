@@ -8,7 +8,7 @@ read account
 echo -n "repository: "
 read repository
 
-echo -e 'Delete directory'
+echo -e 'Delete directory...'
 rm -rf AndroidStudioProjects/$repository
 
 cd AndroidStudioProjects/
@@ -18,4 +18,3 @@ if [ $account -eq 1 ]; then
 elif [ $account -eq 2 ]; then
 	git clone -b $branch --single-branch https://github.com/f-lab-edu/$repository.git
 fi
-
