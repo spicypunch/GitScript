@@ -8,7 +8,7 @@ read account
 echo -n "repository: "
 read repository
 
-echo -e 'Delete directory...'
+echo -e "Delete '$repository'..."
 rm -rf AndroidStudioProjects/$repository
 
 cd AndroidStudioProjects/
